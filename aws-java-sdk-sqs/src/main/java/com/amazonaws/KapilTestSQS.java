@@ -9,6 +9,8 @@ public class KapilTestSQS {
     public static void main(String[] args) {
         AmazonSQSClient client = new AmazonSQSClient();
         System.out.println(client.getQueueUrl("connect-insight-qastg"));
+        client.sendMessage(client.getQueueUrl("connect-insight-qastg").getQueueUrl(),"This is a first test message");
+        System.out.println(client.receiveMessage(client.getQueueUrl("connect-insight-qastg").getQueueUrl()));
 
     }
 }
