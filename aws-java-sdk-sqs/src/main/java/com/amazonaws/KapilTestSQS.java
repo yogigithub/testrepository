@@ -12,5 +12,7 @@ public class KapilTestSQS {
         client.sendMessage(client.getQueueUrl("connect-insight-qastg").getQueueUrl(),"This is a first test message");
         System.out.println(client.receiveMessage(client.getQueueUrl("connect-insight-qastg").getQueueUrl()));
 
+        //THis commit should only go to local branch.
+
     }
 }
