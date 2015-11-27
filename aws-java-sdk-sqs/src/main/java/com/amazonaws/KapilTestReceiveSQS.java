@@ -4,12 +4,12 @@ import com.amazonaws.handlers.AsyncHandler;
 import com.amazonaws.services.sqs.AmazonSQSAsyncClient;
 import com.amazonaws.services.sqs.AmazonSQSClient;
 import com.amazonaws.services.sqs.buffered.AmazonSQSBufferedAsyncClient;
-import com.amazonaws.services.sqs.model.DeleteMessageRequest;
-import com.amazonaws.services.sqs.model.Message;
-import com.amazonaws.services.sqs.model.ReceiveMessageRequest;
-import com.amazonaws.services.sqs.model.ReceiveMessageResult;
+import com.amazonaws.services.sqs.model.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by kapil_shrivastava on 11/25/15.
@@ -35,6 +35,7 @@ public class KapilTestReceiveSQS {
 
         //This is how I am trying to receive messages A-synchronusly, but still not getting new messages
         final AmazonSQSAsyncClient asyncClient = new AmazonSQSAsyncClient();
+
         ReceiveMessageResult result = new ReceiveMessageResult();
         AsyncHandler handler = new AsyncHandler() {
             @Override
@@ -54,6 +55,14 @@ public class KapilTestReceiveSQS {
             }
         };
         asyncClient.receiveMessageAsync(receiveMessageRequest,handler);
+        asyncClient.getExecutorService().shutdown();
+        try {
+            asyncClient.getExecutorService().awaitTermination(20, TimeUnit.SECONDS);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        asyncClient.shutdown();
         System.out.println("I am done !! b bye!!");
 
     }
