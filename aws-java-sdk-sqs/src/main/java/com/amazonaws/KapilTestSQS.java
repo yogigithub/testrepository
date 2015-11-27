@@ -45,11 +45,7 @@ public class KapilTestSQS {
             }
         };
         asyncClient.receiveMessageAsync(receiveMessageRequest,handler);
-//        try {
-//            KapilTestSQS.class.wait(15000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
+
 
     }
 }
