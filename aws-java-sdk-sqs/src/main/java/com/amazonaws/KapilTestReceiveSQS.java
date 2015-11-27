@@ -54,7 +54,7 @@ public class KapilTestReceiveSQS {
             }
         };
         asyncClient.receiveMessageAsync(receiveMessageRequest,handler);
-
+        System.out.println("I am done !! b bye!!");
 
     }
 }
