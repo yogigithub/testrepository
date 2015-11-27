@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Created by kapil_shrivastava on 11/25/15.
  */
-public class KapilTestSQS {
+public class KapilTestReceiveSQS {
     public static void main(String[] args) {
 
         AmazonSQSClient client = new AmazonSQSClient();
