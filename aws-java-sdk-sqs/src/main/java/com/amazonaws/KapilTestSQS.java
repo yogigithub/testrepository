@@ -22,7 +22,7 @@ public class KapilTestSQS {
         client.sendMessage(queueURL,"This is a first test message:"+Math.random());
         //System.out.println(client.receiveMessage(queueURL));
 
-        
+        //This is how you receive messages synchronusly
         ReceiveMessageRequest receiveMessageRequest = new ReceiveMessageRequest(queueURL);
         receiveMessageRequest.setMaxNumberOfMessages(10);
         List<Message> messages = client.receiveMessage(receiveMessageRequest).getMessages();
@@ -30,7 +30,7 @@ public class KapilTestSQS {
             System.out.println(message.getBody());
         }
 
-
+        //This is how I am trying to receive messages A-synchronusly, but still not getting new messages
         AmazonSQSAsyncClient asyncClient = new AmazonSQSAsyncClient();
         ReceiveMessageResult result = new ReceiveMessageResult();
         AsyncHandler handler = new AsyncHandler() {
