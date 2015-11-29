@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/aws-java-sdk-sqs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-demo" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
