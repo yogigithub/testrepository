@@ -12,7 +12,7 @@ public class SampleController {
     @RequestMapping("/")
     @ResponseBody
     String home() {
-        return "Hello World with spring boot !!";
+        return "Hello Kapil.. Welcome ! Spring boot !!";
     }
 
     public static void main(String[] args) throws Exception {

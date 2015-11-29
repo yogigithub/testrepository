@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/aws-java-sdk-sqs/aws-java-sdk-sqs.iml" filepath="$PROJECT_DIR$/aws-java-sdk-sqs/aws-java-sdk-sqs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot/spring-boot.iml" filepath="$PROJECT_DIR$/spring-boot/spring-boot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/testrepository.iml" filepath="$PROJECT_DIR$/.idea/testrepository.iml" />
+    </modules>
+  </component>
+</project>
