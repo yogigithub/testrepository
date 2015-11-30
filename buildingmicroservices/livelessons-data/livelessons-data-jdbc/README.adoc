@@ -1,3 +1,6 @@
+
+I had to manually add oracle driver clas to the claspath. Also, i added the active profile as oracle to make sure i am connecting to oracle
+
 :compat-mode:
 = Lesson 4: Working With Data (Relational Database with JDBC)
 
