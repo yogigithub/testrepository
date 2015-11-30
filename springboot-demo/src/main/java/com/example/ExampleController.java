@@ -15,6 +15,7 @@ public class ExampleController {
     }
     @RequestMapping("/")
     public String hello1(){
+
         return "Hi There !!!";
     }
 }
