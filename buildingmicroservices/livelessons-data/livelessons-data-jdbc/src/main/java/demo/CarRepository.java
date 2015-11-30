@@ -17,6 +17,7 @@ public class CarRepository {
 	}
 
 	public List<Car> findByMakeIgnoringCase(String make) {
+
 		return jdbc.query(
 				"select * from car "
 						+ "where UPPER(car.make) = UPPER(?) order by id",
