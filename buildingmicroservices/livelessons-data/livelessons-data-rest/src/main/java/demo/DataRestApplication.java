@@ -11,9 +11,9 @@ public class DataRestApplication {
 	@Bean
 	InitializingBean seedDatabase(CarRepository repository) {
 		return () -> {
-			repository.save(new Car("Honda", "Civic", 1997));
-			repository.save(new Car("Honda", "Accord", 2003));
-			repository.save(new Car("Ford", "Escort", 1985));
+			repository.save(new Car("Honda", "Aviator", 1997));
+			repository.save(new Car("Honda", "According", 2003));
+			repository.save(new Car("Ford", "Escorts", 1985));
 		};
 	}
 
