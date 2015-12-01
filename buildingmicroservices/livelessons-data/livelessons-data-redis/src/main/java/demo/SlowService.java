@@ -11,7 +11,7 @@ public class SlowService {
 	@Cacheable("slow")
 	public String execute(String arg) {
 		try {
-			Thread.sleep(2000);
+			Thread.sleep(70000);
 		} catch (InterruptedException ex) {
 		}
 		return UUID.randomUUID().toString();
