@@ -54,7 +54,7 @@ public class SimpleMovingAvgNewConsumer {
                 }
             }
             // If you are going for at least once, commit after you finished processing everything you got in the last poll
-            movingAvg.consumer.commit(CommitType.ASYNC);
+            movingAvg.consumer.commitAsync();
         }
     }
 
