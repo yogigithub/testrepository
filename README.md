@@ -11,3 +11,6 @@ Trying to build microservices
 
 buildingmicroservices
 These are all the samples for the livelessons
+
+Kafka-examples
+This has consumer and producers for kafka. Simple examples. Need to dig more into spring based consumers and also spring boot to consumer and produce kafka messages.
