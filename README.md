@@ -17,3 +17,6 @@ This has consumer and producers for kafka. Simple examples. Need to dig more int
 
 Dropwizard
 Added a small sample for dropwizard. It compares to spring boot.
+
+Kinesis
+Addeded sample to send and receive messages from Kinesis using KCL. KCL manages shards etc and we dont need to manually do that.
