@@ -95,7 +95,8 @@ public class StockTradeGenerator {
         long quantity = random.nextInt(MAX_QUANTITY) + 1; // add 1 because nextInt() will return between 0 (inclusive)
                                                           // and MAX_QUANTITY (exclusive). we want at least 1 share.
 
-        return new StockTrade(stockPrice.tickerSymbol, tradeType, price, quantity, id.getAndIncrement());
+//        return new StockTrade(stockPrice.tickerSymbol, tradeType, price, quantity, id.getAndIncrement());
+          return new StockTrade("TWO-NEW-SAME-CLIENT", tradeType, price, quantity, id.getAndIncrement());
     }
 
     private static class StockPrice {
